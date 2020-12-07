@@ -1,0 +1,19 @@
+.display-card {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+}
+
+.after {
+    clear: both;
+}
+
+#editor {
+    position: absolute;
+    box-sizing: border-box;
+    border: none;
+}

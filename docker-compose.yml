@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    container_name: coding-drills
+    build:
+      dockerfile: ./dockerfiles/web.dockerfile
+      context: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/var/www/html
+  docker-python-eve:
+    container_name: language-server
+    build:
+      dockerfile: ./dockerfiles/docker.dockerfile
+      context: .
+    privileged: true
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./docker-python-fastapi/main.py:/main.py

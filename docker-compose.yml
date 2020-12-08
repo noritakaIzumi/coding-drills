@@ -13,7 +13,7 @@ services:
   docker-python-eve:
     container_name: language-server
     build:
-      dockerfile: ./dockerfiles/docker.dockerfile
+      dockerfile: dockerfiles/docker-python-fastapi.dockerfile
       context: .
     privileged: true
     ports:

@@ -17,3 +17,29 @@
     box-sizing: border-box;
     border: none;
 }
+
+.run-result-area {
+    border: solid 1px black;
+    overflow: scroll;
+    padding: 7px;
+    font-family: Monaco, sans-serif;
+    font-weight: bold;
+}
+
+#run-result-stdout {
+    color: green;
+}
+
+#run-result-stderr {
+    color: red;
+}
+
+#alert-area {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: blue;
+    color: yellow;
+    padding: 10px;
+}

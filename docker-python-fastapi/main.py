@@ -1,5 +1,4 @@
-from fastapi import FastAPI
-from enum import Enum
+from fastapi import FastAPI, File, UploadFile
 
 app = FastAPI()
 
@@ -7,3 +6,13 @@ app = FastAPI()
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
+
+
+@app.post("/python")
+async def run_python(file: UploadFile = File(...)):
+    code = await file.read()
+    with open("/code.py", "w") as f:
+        f.write(code.decode('utf-8'))
+    import subprocess
+    proc = subprocess.run(['python3', '/code.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    return {'stdout': proc.stdout, 'stderr': proc.stderr}

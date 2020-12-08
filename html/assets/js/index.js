@@ -42,7 +42,7 @@ function runCode() {
                 }
             }
         }
-        retryCountdown(2)();
+        retryCountdown(retryTimeout(rc) / 1000)();
         if (rc < 3) {
             setTimeout(runCode, retryTimeout(rc++));
         } else {

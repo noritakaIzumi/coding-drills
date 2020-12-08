@@ -1,6 +1,6 @@
 <?php
 
-$Drill = '"Hello World" と出力してみましょう。';
+$drill = '<b>Hello World</b> と出力してみましょう。';
 $defaultCode = file_get_contents('/var/www/html/code.py');
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $defaultCode = file_get_contents('/var/www/html/code.py');
 <body>
 <div id="problem-area" class="display-card">
     <h2>Drill</h2>
-    <p><?= $Drill ?></p>
+    <p><?= $drill ?></p>
     <p>
         <input type="button" onclick="runCode();" value="実行 (Ctrl + Enter)" id="button-run">
         <input type="button" onclick="saveFile();" value="保存 (Ctrl + S)" id="button-save">
@@ -29,7 +29,7 @@ $defaultCode = file_get_contents('/var/www/html/code.py');
     <div id="problem-area-bottom"></div>
 </div>
 <script src="assets/js/problem-area.js" type="text/javascript" charset="utf-8"></script>
-<div id="answer-area" class="display-card">
+<div id="coding-area" class="display-card">
     <h2>こちらにコードを書きましょう</h2>
     <div id="editor"><?= $defaultCode ?></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js" type="text/javascript"
@@ -37,7 +37,8 @@ $defaultCode = file_get_contents('/var/www/html/code.py');
     <script src="assets/js/answer-area.js" type="text/javascript" charset="utf-8"></script>
 </div>
 <div class="after"></div>
-<script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js" type="text/javascript"
+        charset="utf-8"></script>
 <script src="assets/js/add-shortcut.js" type="text/javascript" charset="utf-8"></script>
 <p id="alert-area"></p>
 </body>

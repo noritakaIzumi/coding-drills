@@ -88,7 +88,9 @@ function runCode() {
             }
         }
     }
-    xhr.send(`code=${encodeURIComponent(editor.getValue())}`);
+    // Send request
+    xhr.send();
+
     const monitorReadyState = (readyState) => {
         return () => {
             if (xhr.readyState === readyState) {

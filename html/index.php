@@ -7,11 +7,12 @@ $defaultCode = file_get_contents('/var/www/html/code.py');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ACE in Action</title>
+    <title>Coding Drills</title>
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/js/index.js"></script>
 </head>
 <body>
+<h1>Coding Drills</h1>
 <div id="problem-area" class="display-card">
     <h2>Drill</h2>
     <p><?= $drill ?></p>

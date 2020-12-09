@@ -16,7 +16,12 @@ services:
       dockerfile: dockerfiles/docker-python-fastapi.dockerfile
       context: .
     privileged: true
+    restart: always
+    expose:
+      - "8000"
     ports:
       - "8000:8000"
+    working_dir: /docker-python-fastapi
     volumes:
-      - ./docker-python-fastapi/main.py:/main.py
+      - ./docker-python-fastapi:/docker-python-fastapi
+    command: sh -c "dockerd-entrypoint.sh & uvicorn main:app --reload --host 0.0.0.0 --port 8000"

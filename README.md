@@ -24,7 +24,7 @@ cd coding-drills
 docker-compose up -d
 ```
 
-### Setup run-code server
+### Setup run-code server (first time only)
 
 Access `http://localhost:8000/docs` on your browser, and click `/images/pull` -> `Try it out` -> `Execute`.
 

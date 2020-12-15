@@ -1,2 +1,6 @@
 # Editor settings.
 .idea/
+
+# Temporary code files.
+html/code.*
+docker-python-fastapi/code.*

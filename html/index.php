@@ -1,7 +1,9 @@
 <?php
 
 $drill = '<b>Hello World</b> と出力してみましょう。';
-$defaultCode = file_get_contents('/var/www/html/code.py');
+if (!$defaultCode = @file_get_contents('/var/www/html/code.py')) {
+    $defaultCode = "print(\"Hello World\")\n";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -8,7 +8,7 @@ header('Content-type: text/json; charset=utf-8');
 $allowOrigin = 'localhost';
 header("Access-Control-Allow-Origin: ${allowOrigin}");
 
-$domain = "language-server";
+$domain = "run-code-server";
 $port = "8000";
 
 $filename = '/var/www/html/code.py';

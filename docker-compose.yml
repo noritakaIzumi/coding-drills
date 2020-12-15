@@ -10,8 +10,8 @@ services:
       - "80:80"
     volumes:
       - ./html:/var/www/html
-  docker-python-eve:
-    container_name: language-server
+  run-code-server:
+    container_name: run-code-server
     build:
       dockerfile: dockerfiles/docker-python-fastapi.dockerfile
       context: .
@@ -24,4 +24,5 @@ services:
     working_dir: /docker-python-fastapi
     volumes:
       - ./docker-python-fastapi:/docker-python-fastapi
-    command: sh -c "dockerd-entrypoint.sh & uvicorn main:app --reload --host 0.0.0.0 --port 8000"
+    command: sh -c "dockerd-entrypoint.sh & uvicorn main:app --host 0.0.0.0 --port 8000"
+#    command: sh -c "dockerd-entrypoint.sh & uvicorn main:app --reload --host 0.0.0.0 --port 8000"
